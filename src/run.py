@@ -8,15 +8,21 @@ spells = [
         "beam"
         ]
 
+
+
 print ("Welcome to Wizards! You are a Wizard!")
 print ("You are standing in an open field. Infront of you is a single training dummy on an iron pole")
 print ("You are about 10m away from the dummy.")
 print ("\nPlease Type 'sb' to access your spell book")
 print ("Please Type 'help' if you want help with the game")
 
-command = input("Please Enter a Command: ")
+command = raw_input("Please Enter a Command: ")
 
 while (command != "q"):
+
+    if (command == "cast"):
+        castingMode()
+
     if (command == "help"):
         print ("\nWizards is a game in which you use use your typing skills to cast spells and defeat other wizards!")
         print ("Typing speed and skill is important!")
@@ -36,3 +42,8 @@ while (command != "q"):
 
     if (command == "q"):
         print ("Thanks for Playing!")
+
+    else:
+        print ("Command not recognised. Please try again")
+
+    command = raw_input("Please Enter a Command: ")
